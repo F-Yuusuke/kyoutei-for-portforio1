@@ -1,0 +1,59 @@
+body {
+  background: #F5F5F5;
+}
+
+#wrapper {
+  color: #333;
+  text-align: center;
+}
+
+#btn {
+  background: #F27398;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px 60px;
+  text-decoration: none;
+}
+
+#output {
+  background: #fff;
+  border-radius: 10px;
+  color: #333;
+  height: 50vh;
+  line-height: 50vh;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 1000;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, .7);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#output,
+#overlay {
+  opacity: 0;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+#output.fadein,
+#overlay.fadein {
+  opacity: 1;
+  visibility: visible;
+}
